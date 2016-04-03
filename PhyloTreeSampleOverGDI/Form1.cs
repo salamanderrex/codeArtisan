@@ -18,17 +18,23 @@ using System.IO;
 using System.Reflection;
 using System.Text.RegularExpressions;
 
-namespace PhyloTreeSampleOverGDI {
-    public partial class Form1 : Form {
+namespace PhyloTreeSampleOverGDI
+{
+    public partial class Form1 : Form
+    {
         GViewer viewer = new GViewer();
         List<IR_Cluster> IR_List = new List<IR_Cluster>();
 
+
         int counter = 0;
-        int buttonToggle = 0; //walkaround for button1 and button2
-        public Form1() {
 
 
+        public Form1()
+        {
+
+            
             string path = Path.Combine(Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location), @"crazyPointer.pointer.log");
+           // codeBox.Text = System.IO.File.ReadAllText(@"crazyPointer.pointer.log");
             
             readFile(path, IR_List);
 
@@ -39,6 +45,7 @@ namespace PhyloTreeSampleOverGDI {
             viewer.Dock = DockStyle.Fill;
             viewer.LayoutAlgorithmSettingsButtonVisible = false;
             ResumeLayout();
+            codeBox.Lines = File.ReadAllLines(@"crazyPointer.cpp");
 
 
 
@@ -51,18 +58,37 @@ namespace PhyloTreeSampleOverGDI {
             if (counter % 3 == 0)
             {
                 return Microsoft.Msagl.Drawing.Color.Green;
-            } else if (counter % 3 == 1)
+            }
+            else if (counter % 3 == 1)
             {
                 return Microsoft.Msagl.Drawing.Color.PowderBlue;
-            } else if (counter % 3 == 2)
+            }
+            else if (counter % 3 == 2)
             {
                 return Microsoft.Msagl.Drawing.Color.Yellow;
             }
 
             return Microsoft.Msagl.Drawing.Color.Purple;
         }
-        void button1_Click(object sender, EventArgs e) {
-         
+
+
+        void button1_Click(object sender, EventArgs e)
+        {
+            button_ClickBase(sender, e, 0);
+
+        }
+
+
+        void button2_click(object sender, EventArgs e)
+        {
+            button_ClickBase(sender, e, 1);
+
+        }
+
+
+        void button_ClickBase(object sender, EventArgs e, int counterDirection)
+        {
+
             if (counter >= IR_List.Count())
             {
                 counter = IR_List.Count() - 1;
@@ -71,60 +97,91 @@ namespace PhyloTreeSampleOverGDI {
             {
                 counter = 0;
             }
-            
-              
-            
-         
+
+
+
             var graph = new Graph();
-          
+
             Console.WriteLine("in the buttion1!~!!!!!");
-            
-            
+
+
             IR_Cluster irCluster = IR_List[counter];
-            counter++;
+            if (counterDirection == 0)
+            {
+                counter++;
+                counter++;
+            }
+            else
+            {
+                counter--;
+            }
             Console.WriteLine("conuter is " + counter);
             //graph.AddEdge("instruction", "instruction").LabelText = irCluster.cluster[0].Instname;
             //Node Insnode = new Node(irCluster.cluster[0].Instname);
             this.textBox1.Text = irCluster.cluster[0].Instname;
-           // graph.AddNode(Insnode);
-            counter++;
+            // graph.AddNode(Insnode);
+
             string previousP = "";
             int color = 0;
+
+            List<KeyValuePair<String, List<string>>> coloring = new List<KeyValuePair<string, List<string>>>();
+            List<string> currColorList = new List<string>();
             foreach (IR ir in irCluster.cluster)
             {
+
                 Console.WriteLine(ir.PointerStatus);
                 String startP = ir.returnStartP();
                 String endP = ir.returnEndP();
                 //graph.AddEdge(startP, endP);
                 if (!startP.Equals(previousP))
                 {
-                    
+                    if (previousP != "" && currColorList.Count() > 0)
+                    {
+                        coloring.Add(new KeyValuePair<String, List<string>>(previousP, currColorList));
+                    }
+                    currColorList = new List<string>();
                     color++;
                 }
-                previousP = startP; 
+                previousP = startP;
                 if (startP.Equals(endP) && (startP.Equals("BOTTOM") || startP.Equals("TOP")))
                 {
+                    //BTOOOM or TOP
                     Node node = new Node(startP);
                     graph.AddNode(node);
                 }
                 else
                 {
+                    currColorList.Add(endP);
                     graph.AddEdge(startP, endP);
                     Microsoft.Msagl.Drawing.Node c = graph.FindNode(startP);
                     c.Attr.Shape = Microsoft.Msagl.Drawing.Shape.Circle;
                     graph.FindNode(startP).Attr.FillColor = getAcolor(color);
                     graph.FindNode(endP).Attr.FillColor = getAcolor(color);
+
+
+                    //check end pointer shared by others
+
+                    foreach (KeyValuePair<String, List<string>> kvp in coloring)
+                    {
+                        List<string> tmpList = kvp.Value;
+                        foreach (string s in tmpList)
+                        {
+                            if (s.Equals(endP))
+                            {
+                                graph.FindNode(endP).Attr.FillColor = Microsoft.Msagl.Drawing.Color.Red;
+                            }
+                        }
+                    }
+
                 }
 
             }
-       
+
             viewer.Graph = graph;
 
-           
-            
+
+
         }
-
-
 
 
         static ICurve CreateLabelAndBoundary(Node node)
@@ -235,210 +292,107 @@ namespace PhyloTreeSampleOverGDI {
 
         }
 
-        private void button2_click(object sender, EventArgs e)
+
+
+
+
+
+
+        public class IR
         {
-          //  counter--;
-            if (counter >= IR_List.Count())
-            {
-                counter = IR_List.Count() - 1;
-            }
-            if (counter < 0)
-            {
-                counter = 0;
-            }
-
-
-
-
-            if (counter >= IR_List.Count())
-            {
-                counter = IR_List.Count() - 1;
-            }
-            if (counter < 0)
-            {
-                counter = 0;
-            }
-
-
-
-
-            var graph = new Graph();
-
-            Console.WriteLine("in the buttion1!~!!!!!");
-
-
-            IR_Cluster irCluster = IR_List[counter];
-         
-            Console.WriteLine("conuter is " + counter);
-            //graph.AddEdge("instruction", "instruction").LabelText = irCluster.cluster[0].Instname;
-            //Node Insnode = new Node(irCluster.cluster[0].Instname);
-            this.textBox1.Text = irCluster.cluster[0].Instname;
-            // graph.AddNode(Insnode);
-            counter--;
-
-            foreach (IR ir in irCluster.cluster)
-            {
-                Console.WriteLine(ir.PointerStatus);
-                String startP = ir.returnStartP();
-                String endP = ir.returnEndP();
-                //graph.AddEdge(startP, endP);
-                if (startP.Equals(endP) && (startP.Equals("BOTTOM") || startP.Equals("TOP")))
-                {
-                    Node node = new Node(startP);
-                    graph.AddNode(node);
-                }
-                else
-                {
-                    graph.AddEdge(startP, endP);
-                    Microsoft.Msagl.Drawing.Node c = graph.FindNode(startP);
-                    c.Attr.Shape = Microsoft.Msagl.Drawing.Shape.Diamond;
-                }
-
-            }
-
             /*
-            graph.CreateGeometryGraph();
-            foreach (Node node in graph.Nodes)
-                node.GeometryNode.BoundaryCurve = CreateLabelAndBoundary(node);
-               
-            foreach (var edge in graph.Edges)
-            {
-                if (edge.Label != null)
-                {
-                    var geomEdge = edge.GeometryEdge;
-                    double width;
-                    double height;
-                    StringMeasure.MeasureWithFont(edge.LabelText,
-                                                  new Font(edge.Label.FontName, (float)edge.Label.FontSize), out width, out height);
-                    edge.Label.GeometryLabel = geomEdge.Label = new Label(width, height, geomEdge);
-                }
-
-            }
-
-            var geomGraph = graph.GeometryGraph;
-
-            var geomGraphComponents = GraphConnectedComponents.CreateComponents(geomGraph.Nodes, geomGraph.Edges);
-            var settings = new SugiyamaLayoutSettings();
-            foreach (var subgraph in geomGraphComponents)
-            {
-
-                var layout = new LayeredLayout(subgraph, settings);
-                subgraph.Margins = settings.NodeSeparation / 2;
-                layout.Run();
-
-            }
-
-            Microsoft.Msagl.Layout.MDS.MdsGraphLayout.PackGraphs(geomGraphComponents, settings);
-
-            geomGraph.UpdateBoundingBox();
+            def __init__(self, FunctionName, Instname, direction, pointerStatus):
+            self.functionName = FunctionName
+            self.direction = direction
+            self.Instname = Instname
+            self.pointerStatus = pointerStatus
             */
 
-            //  viewer.NeedToCalculateLayout = false;
-            viewer.Graph = graph;
+            public String functionName { get; set; }
+            public String direction { get; set; }  //incoming or outcoming
+            public String Instname { get; set; }
+            public String PointerStatus { get; set; }
 
+            public IR(String functionName, String direction, String Instname, String PointerStatus)
+            {
+                this.functionName = functionName;
+                this.direction = direction;
+                this.Instname = Instname;
+                this.PointerStatus = PointerStatus;
+            }
 
-        }
-    }
-
-
-
-
-
-
-    public class IR
-    {
-        /*
-        def __init__(self, FunctionName, Instname, direction, pointerStatus):
-        self.functionName = FunctionName
-        self.direction = direction
-        self.Instname = Instname
-        self.pointerStatus = pointerStatus
-        */
-
-        public String functionName { get; set; }
-        public String direction { get; set; }  //incoming or outcoming
-        public String Instname { get; set; }
-        public String PointerStatus { get; set; }
-
-        public IR(String functionName, String direction, String Instname, String PointerStatus)
-        {
-            this.functionName = functionName;
-            this.direction = direction;
-            this.Instname = Instname;
-            this.PointerStatus = PointerStatus;
-        }
-
-        public string returnStartP()
-        {
-
-
-            string returnStr = PointerStatus; // for Bottom
-            string pattern = @"(?<word>\w+)->\w+";
-
-            Regex rgx = new Regex(pattern, RegexOptions.IgnoreCase);
-            MatchCollection matches = rgx.Matches(PointerStatus);
-            if (matches.Count > 0)
+            public string returnStartP()
             {
 
-                //Console.WriteLine("{0} ({1} matches):", PointerStatus, matches.Count);
-                foreach (Match match in matches)
+
+                string returnStr = PointerStatus; // for Bottom
+                string pattern = @"(?<word>\w+)->\w+";
+
+                Regex rgx = new Regex(pattern, RegexOptions.IgnoreCase);
+                MatchCollection matches = rgx.Matches(PointerStatus);
+                if (matches.Count > 0)
                 {
-                    GroupCollection groups = match.Groups;
-                    // Console.WriteLine(" \naddsdas`  " + match.Value + "  " + groups["word"].Value);
-                    returnStr = groups["word"].Value;
+
+                    //Console.WriteLine("{0} ({1} matches):", PointerStatus, matches.Count);
+                    foreach (Match match in matches)
+                    {
+                        GroupCollection groups = match.Groups;
+                        // Console.WriteLine(" \naddsdas`  " + match.Value + "  " + groups["word"].Value);
+                        returnStr = groups["word"].Value;
+                    }
                 }
+
+                Console.WriteLine(returnStr);
+                return returnStr;
             }
 
-            Console.WriteLine(returnStr);
-            return returnStr;
-        }
-
-        public string returnEndP()
-        {
-
-
-            string returnStr = PointerStatus; // for Bottom
-            string pattern = @"\w+->(?<word>\w+)";
-
-
-            Regex rgx = new Regex(pattern, RegexOptions.IgnoreCase);
-            MatchCollection matches = rgx.Matches(PointerStatus);
-            if (matches.Count > 0)
+            public string returnEndP()
             {
 
-                //Console.WriteLine("{0} ({1} matches):", PointerStatus, matches.Count);
-                foreach (Match match in matches)
+
+                string returnStr = PointerStatus; // for Bottom
+                string pattern = @"\w+->(?<word>\w+)";
+
+
+                Regex rgx = new Regex(pattern, RegexOptions.IgnoreCase);
+                MatchCollection matches = rgx.Matches(PointerStatus);
+                if (matches.Count > 0)
                 {
-                    GroupCollection groups = match.Groups;
-                    // Console.WriteLine(" \naddsdas`  " + match.Value + "  " + groups["word"].Value);
-                    returnStr = groups["word"].Value;
+
+                    //Console.WriteLine("{0} ({1} matches):", PointerStatus, matches.Count);
+                    foreach (Match match in matches)
+                    {
+                        GroupCollection groups = match.Groups;
+                        // Console.WriteLine(" \naddsdas`  " + match.Value + "  " + groups["word"].Value);
+                        returnStr = groups["word"].Value;
+                    }
                 }
+
+                Console.WriteLine(returnStr);
+                return returnStr;
             }
-
-            Console.WriteLine(returnStr);
-            return returnStr;
         }
-    }
 
-    public class IR_Cluster
-    {
-        public List<IR> cluster = new List<IR>();
-        public Boolean memberOrNot(IR ir)
+        public class IR_Cluster
         {
-            if (cluster.Count == 0)
+            public List<IR> cluster = new List<IR>();
+            public Boolean memberOrNot(IR ir)
             {
-                return true;
+                if (cluster.Count == 0)
+                {
+                    return true;
+                }
+
+                if (ir.functionName.Equals(cluster[0].functionName) &&
+                     ir.direction.Equals(cluster[0].direction) &&
+                     ir.Instname.Equals(cluster[0].Instname))
+                {
+                    return true;
+                }
+                return false;
             }
 
-            if (ir.functionName.Equals(cluster[0].functionName) &&
-                 ir.direction.Equals(cluster[0].direction) &&
-                 ir.Instname.Equals(cluster[0].Instname))
-            {
-                return true;
-            }
-            return false;
+
         }
-
-
     }
 }
