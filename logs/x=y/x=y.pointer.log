@@ -1,0 +1,116 @@
+Printing analysis 'PointerGuardian Pass' for function 'main':
+"Function Name" : "main
+representation :   %a = alloca i32, align 4
+#Edge incoming
+BOTTOM
+
+#Edge outcoming
+BOTTOM
+
+
+representation :   %b = alloca i32, align 4
+#Edge incoming
+BOTTOM
+
+#Edge outcoming
+BOTTOM
+
+
+representation :   %pa = alloca i32*, align 8
+#Edge incoming
+BOTTOM
+
+#Edge outcoming
+BOTTOM
+
+
+representation :   %pb = alloca i32*, align 8
+#Edge incoming
+BOTTOM
+
+#Edge outcoming
+BOTTOM
+
+
+representation :   store i32* %a, i32** %pa, align 8
+#Edge incoming
+BOTTOM
+
+#Edge outcoming
+pa->a
+
+
+
+representation :   store i32* %b, i32** %pb, align 8
+#Edge incoming
+pa->a
+
+
+#Edge outcoming
+pa->a
+pb->b
+
+
+
+representation :   %0 = load i32** %pb, align 8
+#Edge incoming
+pa->a
+pb->b
+
+
+#Edge outcoming
+pa->a
+pb->b
+
+
+
+representation :   store i32* %0, i32** %pa, align 8
+#Edge incoming
+pa->a
+pb->b
+
+
+#Edge outcoming
+pa->a
+pb->b
+
+
+
+representation :   ret i32 0
+#Edge incoming
+pa->a
+pb->b
+
+
+#Edge outcoming
+pa->a
+pb->b
+
+
+
+representation : 
+entry:
+  %a = alloca i32, align 4
+  %b = alloca i32, align 4
+  %pa = alloca i32*, align 8
+  %pb = alloca i32*, align 8
+  store i32* %a, i32** %pa, align 8
+  store i32* %b, i32** %pb, align 8
+  %0 = load i32** %pb, align 8
+  store i32* %0, i32** %pa, align 8
+  ret i32 0
+
+#Edge incoming
+pa->a
+pb->b
+
+pa->a
+pb->b
+
+
+#Edge outcoming
+pa->a
+pb->b
+
+
+

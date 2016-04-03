@@ -1,0 +1,342 @@
+Printing analysis 'Constant Propagation Analysis Pass' for function '__cxx_global_var_init':
+representation :   call void @_ZNSt8ios_base4InitC1Ev(%"class.std::ios_base::Init"* @_ZStL8__ioinit)
+#Edge incoming
+BOTTOM
+
+#Edge outcoming
+BOTTOM
+
+
+representation :   %0 = call i32 @__cxa_atexit(void (i8*)* bitcast (void (%"class.std::ios_base::Init"*)* @_ZNSt8ios_base4InitD1Ev to void (i8*)*), i8* getelementptr inbounds (%"class.std::ios_base::Init"* @_ZStL8__ioinit, i32 0, i32 0), i8* @__dso_handle) #1
+#Edge incoming
+BOTTOM
+
+#Edge outcoming
+BOTTOM
+
+
+representation :   ret void
+#Edge incoming
+BOTTOM
+
+#Edge outcoming
+BOTTOM
+
+
+representation : 
+entry:
+  call void @_ZNSt8ios_base4InitC1Ev(%"class.std::ios_base::Init"* @_ZStL8__ioinit)
+  %0 = call i32 @__cxa_atexit(void (i8*)* bitcast (void (%"class.std::ios_base::Init"*)* @_ZNSt8ios_base4InitD1Ev to void (i8*)*), i8* getelementptr inbounds (%"class.std::ios_base::Init"* @_ZStL8__ioinit, i32 0, i32 0), i8* @__dso_handle) #1
+  ret void
+
+#Edge incoming
+BOTTOM
+BOTTOM
+
+#Edge outcoming
+BOTTOM
+
+
+Printing analysis 'Constant Propagation Analysis Pass' for function 'main':
+representation :   call void @_ZNSt8ios_base4InitC1Ev(%"class.std::ios_base::Init"* @_ZStL8__ioinit)
+#Edge incoming
+BOTTOM
+
+#Edge outcoming
+BOTTOM
+
+
+representation :   %0 = call i32 @__cxa_atexit(void (i8*)* bitcast (void (%"class.std::ios_base::Init"*)* @_ZNSt8ios_base4InitD1Ev to void (i8*)*), i8* getelementptr inbounds (%"class.std::ios_base::Init"* @_ZStL8__ioinit, i32 0, i32 0), i8* @__dso_handle) #1
+#Edge incoming
+BOTTOM
+
+#Edge outcoming
+BOTTOM
+
+
+representation :   ret void
+#Edge incoming
+BOTTOM
+
+#Edge outcoming
+BOTTOM
+
+
+representation : 
+entry:
+  call void @_ZNSt8ios_base4InitC1Ev(%"class.std::ios_base::Init"* @_ZStL8__ioinit)
+  %0 = call i32 @__cxa_atexit(void (i8*)* bitcast (void (%"class.std::ios_base::Init"*)* @_ZNSt8ios_base4InitD1Ev to void (i8*)*), i8* getelementptr inbounds (%"class.std::ios_base::Init"* @_ZStL8__ioinit, i32 0, i32 0), i8* @__dso_handle) #1
+  ret void
+
+#Edge incoming
+BOTTOM
+BOTTOM
+
+#Edge outcoming
+BOTTOM
+
+
+representation :   %retval = alloca i32, align 4
+#Edge incoming
+BOTTOM
+
+#Edge outcoming
+BOTTOM
+
+
+representation :   %x = alloca i32, align 4
+#Edge incoming
+BOTTOM
+
+#Edge outcoming
+BOTTOM
+
+
+representation :   %y = alloca i32, align 4
+#Edge incoming
+BOTTOM
+
+#Edge outcoming
+BOTTOM
+
+
+representation :   store i32 0, i32* %retval
+#Edge incoming
+BOTTOM
+
+#Edge outcoming
+retval->0
+
+
+
+representation :   store i32 3, i32* %x, align 4
+#Edge incoming
+retval->0
+
+
+#Edge outcoming
+retval->0
+x->3
+
+
+
+representation :   store i32 5, i32* %y, align 4
+#Edge incoming
+retval->0
+x->3
+
+
+#Edge outcoming
+retval->0
+x->3
+y->5
+
+
+
+representation :   ret i32 0
+#Edge incoming
+retval->0
+x->3
+y->5
+
+
+#Edge outcoming
+retval->0
+x->3
+y->5
+
+
+
+representation : 
+entry:
+  %retval = alloca i32, align 4
+  %x = alloca i32, align 4
+  %y = alloca i32, align 4
+  store i32 0, i32* %retval
+  store i32 3, i32* %x, align 4
+  store i32 5, i32* %y, align 4
+  ret i32 0
+
+#Edge incoming
+retval->0
+x->3
+y->5
+
+retval->0
+x->3
+y->5
+
+
+#Edge outcoming
+retval->0
+x->3
+y->5
+
+
+
+Printing analysis 'Constant Propagation Analysis Pass' for function '_GLOBAL__I_a':
+representation :   call void @_ZNSt8ios_base4InitC1Ev(%"class.std::ios_base::Init"* @_ZStL8__ioinit)
+#Edge incoming
+BOTTOM
+
+#Edge outcoming
+BOTTOM
+
+
+representation :   %0 = call i32 @__cxa_atexit(void (i8*)* bitcast (void (%"class.std::ios_base::Init"*)* @_ZNSt8ios_base4InitD1Ev to void (i8*)*), i8* getelementptr inbounds (%"class.std::ios_base::Init"* @_ZStL8__ioinit, i32 0, i32 0), i8* @__dso_handle) #1
+#Edge incoming
+BOTTOM
+
+#Edge outcoming
+BOTTOM
+
+
+representation :   ret void
+#Edge incoming
+BOTTOM
+
+#Edge outcoming
+BOTTOM
+
+
+representation : 
+entry:
+  call void @_ZNSt8ios_base4InitC1Ev(%"class.std::ios_base::Init"* @_ZStL8__ioinit)
+  %0 = call i32 @__cxa_atexit(void (i8*)* bitcast (void (%"class.std::ios_base::Init"*)* @_ZNSt8ios_base4InitD1Ev to void (i8*)*), i8* getelementptr inbounds (%"class.std::ios_base::Init"* @_ZStL8__ioinit, i32 0, i32 0), i8* @__dso_handle) #1
+  ret void
+
+#Edge incoming
+BOTTOM
+BOTTOM
+
+#Edge outcoming
+BOTTOM
+
+
+representation :   %retval = alloca i32, align 4
+#Edge incoming
+BOTTOM
+
+#Edge outcoming
+BOTTOM
+
+
+representation :   %x = alloca i32, align 4
+#Edge incoming
+BOTTOM
+
+#Edge outcoming
+BOTTOM
+
+
+representation :   %y = alloca i32, align 4
+#Edge incoming
+BOTTOM
+
+#Edge outcoming
+BOTTOM
+
+
+representation :   store i32 0, i32* %retval
+#Edge incoming
+BOTTOM
+
+#Edge outcoming
+retval->0
+
+
+
+representation :   store i32 3, i32* %x, align 4
+#Edge incoming
+retval->0
+
+
+#Edge outcoming
+retval->0
+x->3
+
+
+
+representation :   store i32 5, i32* %y, align 4
+#Edge incoming
+retval->0
+x->3
+
+
+#Edge outcoming
+retval->0
+x->3
+y->5
+
+
+
+representation :   ret i32 0
+#Edge incoming
+retval->0
+x->3
+y->5
+
+
+#Edge outcoming
+retval->0
+x->3
+y->5
+
+
+
+representation : 
+entry:
+  %retval = alloca i32, align 4
+  %x = alloca i32, align 4
+  %y = alloca i32, align 4
+  store i32 0, i32* %retval
+  store i32 3, i32* %x, align 4
+  store i32 5, i32* %y, align 4
+  ret i32 0
+
+#Edge incoming
+retval->0
+x->3
+y->5
+
+retval->0
+x->3
+y->5
+
+
+#Edge outcoming
+retval->0
+x->3
+y->5
+
+
+
+representation :   call void @__cxx_global_var_init()
+#Edge incoming
+BOTTOM
+
+#Edge outcoming
+BOTTOM
+
+
+representation :   ret void
+#Edge incoming
+BOTTOM
+
+#Edge outcoming
+BOTTOM
+
+
+representation : 
+entry:
+  call void @__cxx_global_var_init()
+  ret void
+
+#Edge incoming
+BOTTOM
+BOTTOM
+
+#Edge outcoming
+BOTTOM
+
+

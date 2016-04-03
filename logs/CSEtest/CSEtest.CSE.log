@@ -1,0 +1,1869 @@
+Printing analysis 'Available Expression Analysis Guardian Pass' for function '__cxx_global_var_init':
+Available Expression AnalysisS: 
+representation :   call void @_ZNSt8ios_base4InitC1Ev(%"class.std::ios_base::Init"* @_ZStL8__ioinit)
+#Edge incoming
+BOTTOM
+
+#Edge outcoming
+BOTTOM
+
+
+representation :   %0 = call i32 @__cxa_atexit(void (i8*)* bitcast (void (%"class.std::ios_base::Init"*)* @_ZNSt8ios_base4InitD1Ev to void (i8*)*), i8* getelementptr inbounds (%"class.std::ios_base::Init"* @_ZStL8__ioinit, i32 0, i32 0), i8* @__dso_handle) #1
+#Edge incoming
+BOTTOM
+
+#Edge outcoming
+BOTTOM
+
+
+representation :   ret void
+#Edge incoming
+BOTTOM
+
+#Edge outcoming
+BOTTOM
+
+
+representation : 
+entry:
+  call void @_ZNSt8ios_base4InitC1Ev(%"class.std::ios_base::Init"* @_ZStL8__ioinit)
+  %0 = call i32 @__cxa_atexit(void (i8*)* bitcast (void (%"class.std::ios_base::Init"*)* @_ZNSt8ios_base4InitD1Ev to void (i8*)*), i8* getelementptr inbounds (%"class.std::ios_base::Init"* @_ZStL8__ioinit, i32 0, i32 0), i8* @__dso_handle) #1
+  ret void
+
+#Edge incoming
+BOTTOM
+BOTTOM
+
+#Edge outcoming
+BOTTOM
+
+
+Printing analysis 'Available Expression Analysis Guardian Pass' for function 'main':
+Available Expression AnalysisS: 
+representation :   call void @_ZNSt8ios_base4InitC1Ev(%"class.std::ios_base::Init"* @_ZStL8__ioinit)
+#Edge incoming
+BOTTOM
+
+#Edge outcoming
+BOTTOM
+
+
+representation :   %0 = call i32 @__cxa_atexit(void (i8*)* bitcast (void (%"class.std::ios_base::Init"*)* @_ZNSt8ios_base4InitD1Ev to void (i8*)*), i8* getelementptr inbounds (%"class.std::ios_base::Init"* @_ZStL8__ioinit, i32 0, i32 0), i8* @__dso_handle) #1
+#Edge incoming
+BOTTOM
+
+#Edge outcoming
+BOTTOM
+
+
+representation :   ret void
+#Edge incoming
+BOTTOM
+
+#Edge outcoming
+BOTTOM
+
+
+representation : 
+entry:
+  call void @_ZNSt8ios_base4InitC1Ev(%"class.std::ios_base::Init"* @_ZStL8__ioinit)
+  %0 = call i32 @__cxa_atexit(void (i8*)* bitcast (void (%"class.std::ios_base::Init"*)* @_ZNSt8ios_base4InitD1Ev to void (i8*)*), i8* getelementptr inbounds (%"class.std::ios_base::Init"* @_ZStL8__ioinit, i32 0, i32 0), i8* @__dso_handle) #1
+  ret void
+
+#Edge incoming
+BOTTOM
+BOTTOM
+
+#Edge outcoming
+BOTTOM
+
+
+representation :   %retval = alloca i32, align 4
+#Edge incoming
+BOTTOM
+
+#Edge outcoming
+BOTTOM
+
+
+representation :   %a = alloca float, align 4
+#Edge incoming
+BOTTOM
+
+#Edge outcoming
+BOTTOM
+
+
+representation :   %b = alloca float, align 4
+#Edge incoming
+BOTTOM
+
+#Edge outcoming
+BOTTOM
+
+
+representation :   %c = alloca i32, align 4
+#Edge incoming
+BOTTOM
+
+#Edge outcoming
+BOTTOM
+
+
+representation :   %d = alloca i32, align 4
+#Edge incoming
+BOTTOM
+
+#Edge outcoming
+BOTTOM
+
+
+representation :   %e = alloca i32, align 4
+#Edge incoming
+BOTTOM
+
+#Edge outcoming
+BOTTOM
+
+
+representation :   %g = alloca i32, align 4
+#Edge incoming
+BOTTOM
+
+#Edge outcoming
+BOTTOM
+
+
+representation :   %f = alloca i32, align 4
+#Edge incoming
+BOTTOM
+
+#Edge outcoming
+BOTTOM
+
+
+representation :   %h = alloca i32, align 4
+#Edge incoming
+BOTTOM
+
+#Edge outcoming
+BOTTOM
+
+
+representation :   %short1 = alloca i16, align 2
+#Edge incoming
+BOTTOM
+
+#Edge outcoming
+BOTTOM
+
+
+representation :   %short2 = alloca i16, align 2
+#Edge incoming
+BOTTOM
+
+#Edge outcoming
+BOTTOM
+
+
+representation :   %ff = alloca i32, align 4
+#Edge incoming
+BOTTOM
+
+#Edge outcoming
+BOTTOM
+
+
+representation :   store i32 0, i32* %retval
+#Edge incoming
+BOTTOM
+
+#Edge outcoming
+BOTTOM
+
+
+representation :   store float 0x4015333340000000, float* %a, align 4
+#Edge incoming
+BOTTOM
+
+#Edge outcoming
+BOTTOM
+
+
+representation :   store float 0x402E9999A0000000, float* %b, align 4
+#Edge incoming
+BOTTOM
+
+#Edge outcoming
+BOTTOM
+
+
+representation :   store i32 10, i32* %g, align 4
+#Edge incoming
+BOTTOM
+
+#Edge outcoming
+BOTTOM
+
+
+representation :   %0 = load float* %a, align 4
+#Edge incoming
+BOTTOM
+
+#Edge outcoming
+BOTTOM
+
+
+representation :   %cmp = fcmp oeq float %0, 6.000000e+00
+#Edge incoming
+BOTTOM
+
+#Edge outcoming
+BOTTOM
+
+
+representation :   br i1 %cmp, label %if.then, label %if.else
+#Edge incoming
+BOTTOM
+
+#Edge outcoming
+BOTTOM
+BOTTOM
+
+
+representation :   %1 = load float* %a, align 4
+#Edge incoming
+BOTTOM
+
+#Edge outcoming
+BOTTOM
+
+
+representation :   %4 = load float* %a, align 4
+#Edge incoming
+BOTTOM
+
+#Edge outcoming
+BOTTOM
+
+
+representation :   %5 = load float* %b, align 4
+#Edge incoming
+BOTTOM
+
+#Edge outcoming
+BOTTOM
+
+
+representation :   %add2 = fadd float %4, %5
+#Edge incoming
+BOTTOM
+
+#Edge outcoming
+%add2->fadd %, %
+
+
+
+representation :   %conv3 = fptosi float %add2 to i32
+#Edge incoming
+%add2->fadd %, %
+
+
+#Edge outcoming
+%add2->fadd %, %
+%conv3->fptosi %add2
+
+
+
+representation :   store i32 %conv3, i32* %c, align 4
+#Edge incoming
+%add2->fadd %, %
+%conv3->fptosi %add2
+
+
+#Edge outcoming
+%add2->fadd %, %
+%conv3->fptosi %add2
+
+
+
+representation :   %6 = load i32* %g, align 4
+#Edge incoming
+%add2->fadd %, %
+%conv3->fptosi %add2
+
+
+#Edge outcoming
+%add2->fadd %, %
+%conv3->fptosi %add2
+
+
+
+representation :   %add4 = add nsw i32 %6, 10
+#Edge incoming
+%add2->fadd %, %
+%conv3->fptosi %add2
+
+
+#Edge outcoming
+%add2->fadd %, %
+%add4->add %, 10
+%conv3->fptosi %add2
+
+
+
+representation :   store i32 %add4, i32* %d, align 4
+#Edge incoming
+%add2->fadd %, %
+%add4->add %, 10
+%conv3->fptosi %add2
+
+
+#Edge outcoming
+%add2->fadd %, %
+%add4->add %, 10
+%conv3->fptosi %add2
+
+
+
+representation :   br label %if.end
+#Edge incoming
+%add2->fadd %, %
+%add4->add %, 10
+%conv3->fptosi %add2
+
+
+#Edge outcoming
+%add2->fadd %, %
+%add4->add %, 10
+%conv3->fptosi %add2
+
+
+
+representation :   store i16 2, i16* %short1, align 2
+#Edge incoming
+%add2->fadd %, %
+%add4->add %, 10
+%conv3->fptosi %add2
+
+
+#Edge outcoming
+%add2->fadd %, %
+%add4->add %, 10
+%conv3->fptosi %add2
+
+
+
+representation :   %7 = load i16* %short1, align 2
+#Edge incoming
+%add2->fadd %, %
+%add4->add %, 10
+%conv3->fptosi %add2
+
+
+#Edge outcoming
+%add2->fadd %, %
+%add4->add %, 10
+%conv3->fptosi %add2
+
+
+
+representation :   %conv5 = zext i16 %7 to i32
+#Edge incoming
+%add2->fadd %, %
+%add4->add %, 10
+%conv3->fptosi %add2
+
+
+#Edge outcoming
+%add2->fadd %, %
+%add4->add %, 10
+%conv3->fptosi %add2
+%conv5->zext %
+
+
+
+representation :   %shr = ashr i32 %conv5, 2
+#Edge incoming
+%add2->fadd %, %
+%add4->add %, 10
+%conv3->fptosi %add2
+%conv5->zext %
+
+
+#Edge outcoming
+%add2->fadd %, %
+%add4->add %, 10
+%conv3->fptosi %add2
+%conv5->zext %
+%shr->ashr %conv5, 2
+
+
+
+representation :   %conv6 = trunc i32 %shr to i16
+#Edge incoming
+%add2->fadd %, %
+%add4->add %, 10
+%conv3->fptosi %add2
+%conv5->zext %
+%shr->ashr %conv5, 2
+
+
+#Edge outcoming
+%add2->fadd %, %
+%add4->add %, 10
+%conv3->fptosi %add2
+%conv5->zext %
+%conv6->trunk %shr
+%shr->ashr %conv5, 2
+
+
+
+representation :   store i16 %conv6, i16* %short2, align 2
+#Edge incoming
+%add2->fadd %, %
+%add4->add %, 10
+%conv3->fptosi %add2
+%conv5->zext %
+%conv6->trunk %shr
+%shr->ashr %conv5, 2
+
+
+#Edge outcoming
+%add2->fadd %, %
+%add4->add %, 10
+%conv3->fptosi %add2
+%conv5->zext %
+%conv6->trunk %shr
+%shr->ashr %conv5, 2
+
+
+
+representation :   %8 = load i32* %c, align 4
+#Edge incoming
+%add2->fadd %, %
+%add4->add %, 10
+%conv3->fptosi %add2
+%conv5->zext %
+%conv6->trunk %shr
+%shr->ashr %conv5, 2
+
+
+#Edge outcoming
+%add2->fadd %, %
+%add4->add %, 10
+%conv3->fptosi %add2
+%conv5->zext %
+%conv6->trunk %shr
+%shr->ashr %conv5, 2
+
+
+
+representation :   %9 = load i32* %d, align 4
+#Edge incoming
+%add2->fadd %, %
+%add4->add %, 10
+%conv3->fptosi %add2
+%conv5->zext %
+%conv6->trunk %shr
+%shr->ashr %conv5, 2
+
+
+#Edge outcoming
+%add2->fadd %, %
+%add4->add %, 10
+%conv3->fptosi %add2
+%conv5->zext %
+%conv6->trunk %shr
+%shr->ashr %conv5, 2
+
+
+
+representation :   %add7 = add nsw i32 %8, %9
+#Edge incoming
+%add2->fadd %, %
+%add4->add %, 10
+%conv3->fptosi %add2
+%conv5->zext %
+%conv6->trunk %shr
+%shr->ashr %conv5, 2
+
+
+#Edge outcoming
+%add2->fadd %, %
+%add4->add %, 10
+%add7->add %, %
+%conv3->fptosi %add2
+%conv5->zext %
+%conv6->trunk %shr
+%shr->ashr %conv5, 2
+
+
+
+representation :   store i32 %add7, i32* %h, align 4
+#Edge incoming
+%add2->fadd %, %
+%add4->add %, 10
+%add7->add %, %
+%conv3->fptosi %add2
+%conv5->zext %
+%conv6->trunk %shr
+%shr->ashr %conv5, 2
+
+
+#Edge outcoming
+%add2->fadd %, %
+%add4->add %, 10
+%add7->add %, %
+%conv3->fptosi %add2
+%conv5->zext %
+%conv6->trunk %shr
+%shr->ashr %conv5, 2
+
+
+
+representation :   %10 = load i32* %d, align 4
+#Edge incoming
+%add2->fadd %, %
+%add4->add %, 10
+%add7->add %, %
+%conv3->fptosi %add2
+%conv5->zext %
+%conv6->trunk %shr
+%shr->ashr %conv5, 2
+
+
+#Edge outcoming
+%add2->fadd %, %
+%add4->add %, 10
+%add7->add %, %
+%conv3->fptosi %add2
+%conv5->zext %
+%conv6->trunk %shr
+%shr->ashr %conv5, 2
+
+
+
+representation :   store i32 %10, i32* %ff, align 4
+#Edge incoming
+%add2->fadd %, %
+%add4->add %, 10
+%add7->add %, %
+%conv3->fptosi %add2
+%conv5->zext %
+%conv6->trunk %shr
+%shr->ashr %conv5, 2
+
+
+#Edge outcoming
+%add2->fadd %, %
+%add4->add %, 10
+%add7->add %, %
+%conv3->fptosi %add2
+%conv5->zext %
+%conv6->trunk %shr
+%shr->ashr %conv5, 2
+
+
+
+representation :   %11 = load i32* %c, align 4
+#Edge incoming
+%add2->fadd %, %
+%add4->add %, 10
+%add7->add %, %
+%conv3->fptosi %add2
+%conv5->zext %
+%conv6->trunk %shr
+%shr->ashr %conv5, 2
+
+
+#Edge outcoming
+%add2->fadd %, %
+%add4->add %, 10
+%add7->add %, %
+%conv3->fptosi %add2
+%conv5->zext %
+%conv6->trunk %shr
+%shr->ashr %conv5, 2
+
+
+
+representation :   %12 = load i32* %d, align 4
+#Edge incoming
+%add2->fadd %, %
+%add4->add %, 10
+%add7->add %, %
+%conv3->fptosi %add2
+%conv5->zext %
+%conv6->trunk %shr
+%shr->ashr %conv5, 2
+
+
+#Edge outcoming
+%add2->fadd %, %
+%add4->add %, 10
+%add7->add %, %
+%conv3->fptosi %add2
+%conv5->zext %
+%conv6->trunk %shr
+%shr->ashr %conv5, 2
+
+
+
+representation :   %add8 = add nsw i32 %11, %12
+#Edge incoming
+%add2->fadd %, %
+%add4->add %, 10
+%add7->add %, %
+%conv3->fptosi %add2
+%conv5->zext %
+%conv6->trunk %shr
+%shr->ashr %conv5, 2
+
+
+#Edge outcoming
+%add2->fadd %, %
+%add4->add %, 10
+%add7->add %, %
+%add8->add %, %
+%conv3->fptosi %add2
+%conv5->zext %
+%conv6->trunk %shr
+%shr->ashr %conv5, 2
+
+
+
+representation :   store i32 %add8, i32* %f, align 4
+#Edge incoming
+%add2->fadd %, %
+%add4->add %, 10
+%add7->add %, %
+%add8->add %, %
+%conv3->fptosi %add2
+%conv5->zext %
+%conv6->trunk %shr
+%shr->ashr %conv5, 2
+
+
+#Edge outcoming
+%add2->fadd %, %
+%add4->add %, 10
+%add7->add %, %
+%add8->add %, %
+%conv3->fptosi %add2
+%conv5->zext %
+%conv6->trunk %shr
+%shr->ashr %conv5, 2
+
+
+
+representation :   %13 = load i32* %f, align 4
+#Edge incoming
+%add2->fadd %, %
+%add4->add %, 10
+%add7->add %, %
+%add8->add %, %
+%conv3->fptosi %add2
+%conv5->zext %
+%conv6->trunk %shr
+%shr->ashr %conv5, 2
+
+
+#Edge outcoming
+%add2->fadd %, %
+%add4->add %, 10
+%add7->add %, %
+%add8->add %, %
+%conv3->fptosi %add2
+%conv5->zext %
+%conv6->trunk %shr
+%shr->ashr %conv5, 2
+
+
+
+representation :   %14 = load i32* %d, align 4
+#Edge incoming
+%add2->fadd %, %
+%add4->add %, 10
+%add7->add %, %
+%add8->add %, %
+%conv3->fptosi %add2
+%conv5->zext %
+%conv6->trunk %shr
+%shr->ashr %conv5, 2
+
+
+#Edge outcoming
+%add2->fadd %, %
+%add4->add %, 10
+%add7->add %, %
+%add8->add %, %
+%conv3->fptosi %add2
+%conv5->zext %
+%conv6->trunk %shr
+%shr->ashr %conv5, 2
+
+
+
+representation :   %add9 = add nsw i32 %13, %14
+#Edge incoming
+%add2->fadd %, %
+%add4->add %, 10
+%add7->add %, %
+%add8->add %, %
+%conv3->fptosi %add2
+%conv5->zext %
+%conv6->trunk %shr
+%shr->ashr %conv5, 2
+
+
+#Edge outcoming
+%add2->fadd %, %
+%add4->add %, 10
+%add7->add %, %
+%add8->add %, %
+%add9->add %, %
+%conv3->fptosi %add2
+%conv5->zext %
+%conv6->trunk %shr
+%shr->ashr %conv5, 2
+
+
+
+representation :   store i32 %add9, i32* %g, align 4
+#Edge incoming
+%add2->fadd %, %
+%add4->add %, 10
+%add7->add %, %
+%add8->add %, %
+%add9->add %, %
+%conv3->fptosi %add2
+%conv5->zext %
+%conv6->trunk %shr
+%shr->ashr %conv5, 2
+
+
+#Edge outcoming
+%add2->fadd %, %
+%add4->add %, 10
+%add7->add %, %
+%add8->add %, %
+%add9->add %, %
+%conv3->fptosi %add2
+%conv5->zext %
+%conv6->trunk %shr
+%shr->ashr %conv5, 2
+
+
+
+representation :   ret i32 0
+#Edge incoming
+%add2->fadd %, %
+%add4->add %, 10
+%add7->add %, %
+%add8->add %, %
+%add9->add %, %
+%conv3->fptosi %add2
+%conv5->zext %
+%conv6->trunk %shr
+%shr->ashr %conv5, 2
+
+
+#Edge outcoming
+%add2->fadd %, %
+%add4->add %, 10
+%add7->add %, %
+%add8->add %, %
+%add9->add %, %
+%conv3->fptosi %add2
+%conv5->zext %
+%conv6->trunk %shr
+%shr->ashr %conv5, 2
+
+
+
+representation : 
+if.end:                                           ; preds = %if.else, %if.then
+  store i16 2, i16* %short1, align 2
+  %7 = load i16* %short1, align 2
+  %conv5 = zext i16 %7 to i32
+  %shr = ashr i32 %conv5, 2
+  %conv6 = trunc i32 %shr to i16
+  store i16 %conv6, i16* %short2, align 2
+  %8 = load i32* %c, align 4
+  %9 = load i32* %d, align 4
+  %add7 = add nsw i32 %8, %9
+  store i32 %add7, i32* %h, align 4
+  %10 = load i32* %d, align 4
+  store i32 %10, i32* %ff, align 4
+  %11 = load i32* %c, align 4
+  %12 = load i32* %d, align 4
+  %add8 = add nsw i32 %11, %12
+  store i32 %add8, i32* %f, align 4
+  %13 = load i32* %f, align 4
+  %14 = load i32* %d, align 4
+  %add9 = add nsw i32 %13, %14
+  store i32 %add9, i32* %g, align 4
+  ret i32 0
+
+#Edge incoming
+%add2->fadd %, %
+%add4->add %, 10
+%add7->add %, %
+%add8->add %, %
+%add9->add %, %
+%conv3->fptosi %add2
+%conv5->zext %
+%conv6->trunk %shr
+%shr->ashr %conv5, 2
+
+%add2->fadd %, %
+%add4->add %, 10
+%add7->add %, %
+%add8->add %, %
+%add9->add %, %
+%conv3->fptosi %add2
+%conv5->zext %
+%conv6->trunk %shr
+%shr->ashr %conv5, 2
+
+
+#Edge outcoming
+%add2->fadd %, %
+%add4->add %, 10
+%add7->add %, %
+%add8->add %, %
+%add9->add %, %
+%conv3->fptosi %add2
+%conv5->zext %
+%conv6->trunk %shr
+%shr->ashr %conv5, 2
+
+
+
+representation :   %2 = load float* %b, align 4
+#Edge incoming
+BOTTOM
+
+#Edge outcoming
+BOTTOM
+
+
+representation :   %add = fadd float %1, %2
+#Edge incoming
+BOTTOM
+
+#Edge outcoming
+%add->fadd %, %
+
+
+
+representation :   %conv = fptosi float %add to i32
+#Edge incoming
+%add->fadd %, %
+
+
+#Edge outcoming
+%add->fadd %, %
+%conv->fptosi %add
+
+
+
+representation :   store i32 %conv, i32* %c, align 4
+#Edge incoming
+%add->fadd %, %
+%conv->fptosi %add
+
+
+#Edge outcoming
+%add->fadd %, %
+%conv->fptosi %add
+
+
+
+representation :   %3 = load i32* %g, align 4
+#Edge incoming
+%add->fadd %, %
+%conv->fptosi %add
+
+
+#Edge outcoming
+%add->fadd %, %
+%conv->fptosi %add
+
+
+
+representation :   %add1 = add nsw i32 %3, 10
+#Edge incoming
+%add->fadd %, %
+%conv->fptosi %add
+
+
+#Edge outcoming
+%add->fadd %, %
+%add1->add %, 10
+%conv->fptosi %add
+
+
+
+representation :   store i32 %add1, i32* %d, align 4
+#Edge incoming
+%add->fadd %, %
+%add1->add %, 10
+%conv->fptosi %add
+
+
+#Edge outcoming
+%add->fadd %, %
+%add1->add %, 10
+%conv->fptosi %add
+
+
+
+representation :   br label %if.end
+#Edge incoming
+%add->fadd %, %
+%add1->add %, 10
+%conv->fptosi %add
+
+%add->fadd %, %
+%add1->add %, 10
+%conv->fptosi %add
+
+
+#Edge outcoming
+%add->fadd %, %
+%add1->add %, 10
+%conv->fptosi %add
+
+
+
+Printing analysis 'Available Expression Analysis Guardian Pass' for function '_GLOBAL__I_a':
+Available Expression AnalysisS: 
+representation :   call void @_ZNSt8ios_base4InitC1Ev(%"class.std::ios_base::Init"* @_ZStL8__ioinit)
+#Edge incoming
+BOTTOM
+
+#Edge outcoming
+BOTTOM
+
+
+representation :   %0 = call i32 @__cxa_atexit(void (i8*)* bitcast (void (%"class.std::ios_base::Init"*)* @_ZNSt8ios_base4InitD1Ev to void (i8*)*), i8* getelementptr inbounds (%"class.std::ios_base::Init"* @_ZStL8__ioinit, i32 0, i32 0), i8* @__dso_handle) #1
+#Edge incoming
+BOTTOM
+
+#Edge outcoming
+BOTTOM
+
+
+representation :   ret void
+#Edge incoming
+BOTTOM
+
+#Edge outcoming
+BOTTOM
+
+
+representation : 
+entry:
+  call void @_ZNSt8ios_base4InitC1Ev(%"class.std::ios_base::Init"* @_ZStL8__ioinit)
+  %0 = call i32 @__cxa_atexit(void (i8*)* bitcast (void (%"class.std::ios_base::Init"*)* @_ZNSt8ios_base4InitD1Ev to void (i8*)*), i8* getelementptr inbounds (%"class.std::ios_base::Init"* @_ZStL8__ioinit, i32 0, i32 0), i8* @__dso_handle) #1
+  ret void
+
+#Edge incoming
+BOTTOM
+BOTTOM
+
+#Edge outcoming
+BOTTOM
+
+
+representation :   %retval = alloca i32, align 4
+#Edge incoming
+BOTTOM
+
+#Edge outcoming
+BOTTOM
+
+
+representation :   %a = alloca float, align 4
+#Edge incoming
+BOTTOM
+
+#Edge outcoming
+BOTTOM
+
+
+representation :   %b = alloca float, align 4
+#Edge incoming
+BOTTOM
+
+#Edge outcoming
+BOTTOM
+
+
+representation :   %c = alloca i32, align 4
+#Edge incoming
+BOTTOM
+
+#Edge outcoming
+BOTTOM
+
+
+representation :   %d = alloca i32, align 4
+#Edge incoming
+BOTTOM
+
+#Edge outcoming
+BOTTOM
+
+
+representation :   %e = alloca i32, align 4
+#Edge incoming
+BOTTOM
+
+#Edge outcoming
+BOTTOM
+
+
+representation :   %g = alloca i32, align 4
+#Edge incoming
+BOTTOM
+
+#Edge outcoming
+BOTTOM
+
+
+representation :   %f = alloca i32, align 4
+#Edge incoming
+BOTTOM
+
+#Edge outcoming
+BOTTOM
+
+
+representation :   %h = alloca i32, align 4
+#Edge incoming
+BOTTOM
+
+#Edge outcoming
+BOTTOM
+
+
+representation :   %short1 = alloca i16, align 2
+#Edge incoming
+BOTTOM
+
+#Edge outcoming
+BOTTOM
+
+
+representation :   %short2 = alloca i16, align 2
+#Edge incoming
+BOTTOM
+
+#Edge outcoming
+BOTTOM
+
+
+representation :   %ff = alloca i32, align 4
+#Edge incoming
+BOTTOM
+
+#Edge outcoming
+BOTTOM
+
+
+representation :   store i32 0, i32* %retval
+#Edge incoming
+BOTTOM
+
+#Edge outcoming
+BOTTOM
+
+
+representation :   store float 0x4015333340000000, float* %a, align 4
+#Edge incoming
+BOTTOM
+
+#Edge outcoming
+BOTTOM
+
+
+representation :   store float 0x402E9999A0000000, float* %b, align 4
+#Edge incoming
+BOTTOM
+
+#Edge outcoming
+BOTTOM
+
+
+representation :   store i32 10, i32* %g, align 4
+#Edge incoming
+BOTTOM
+
+#Edge outcoming
+BOTTOM
+
+
+representation :   %0 = load float* %a, align 4
+#Edge incoming
+BOTTOM
+
+#Edge outcoming
+BOTTOM
+
+
+representation :   %cmp = fcmp oeq float %0, 6.000000e+00
+#Edge incoming
+BOTTOM
+
+#Edge outcoming
+BOTTOM
+
+
+representation :   br i1 %cmp, label %if.then, label %if.else
+#Edge incoming
+BOTTOM
+
+#Edge outcoming
+BOTTOM
+BOTTOM
+
+
+representation :   %1 = load float* %a, align 4
+#Edge incoming
+BOTTOM
+
+#Edge outcoming
+BOTTOM
+
+
+representation :   %4 = load float* %a, align 4
+#Edge incoming
+BOTTOM
+
+#Edge outcoming
+BOTTOM
+
+
+representation :   %5 = load float* %b, align 4
+#Edge incoming
+BOTTOM
+
+#Edge outcoming
+BOTTOM
+
+
+representation :   %add2 = fadd float %4, %5
+#Edge incoming
+BOTTOM
+
+#Edge outcoming
+%add2->fadd %, %
+
+
+
+representation :   %conv3 = fptosi float %add2 to i32
+#Edge incoming
+%add2->fadd %, %
+
+
+#Edge outcoming
+%add2->fadd %, %
+%conv3->fptosi %add2
+
+
+
+representation :   store i32 %conv3, i32* %c, align 4
+#Edge incoming
+%add2->fadd %, %
+%conv3->fptosi %add2
+
+
+#Edge outcoming
+%add2->fadd %, %
+%conv3->fptosi %add2
+
+
+
+representation :   %6 = load i32* %g, align 4
+#Edge incoming
+%add2->fadd %, %
+%conv3->fptosi %add2
+
+
+#Edge outcoming
+%add2->fadd %, %
+%conv3->fptosi %add2
+
+
+
+representation :   %add4 = add nsw i32 %6, 10
+#Edge incoming
+%add2->fadd %, %
+%conv3->fptosi %add2
+
+
+#Edge outcoming
+%add2->fadd %, %
+%add4->add %, 10
+%conv3->fptosi %add2
+
+
+
+representation :   store i32 %add4, i32* %d, align 4
+#Edge incoming
+%add2->fadd %, %
+%add4->add %, 10
+%conv3->fptosi %add2
+
+
+#Edge outcoming
+%add2->fadd %, %
+%add4->add %, 10
+%conv3->fptosi %add2
+
+
+
+representation :   br label %if.end
+#Edge incoming
+%add2->fadd %, %
+%add4->add %, 10
+%conv3->fptosi %add2
+
+
+#Edge outcoming
+%add2->fadd %, %
+%add4->add %, 10
+%conv3->fptosi %add2
+
+
+
+representation :   store i16 2, i16* %short1, align 2
+#Edge incoming
+%add2->fadd %, %
+%add4->add %, 10
+%conv3->fptosi %add2
+
+
+#Edge outcoming
+%add2->fadd %, %
+%add4->add %, 10
+%conv3->fptosi %add2
+
+
+
+representation :   %7 = load i16* %short1, align 2
+#Edge incoming
+%add2->fadd %, %
+%add4->add %, 10
+%conv3->fptosi %add2
+
+
+#Edge outcoming
+%add2->fadd %, %
+%add4->add %, 10
+%conv3->fptosi %add2
+
+
+
+representation :   %conv5 = zext i16 %7 to i32
+#Edge incoming
+%add2->fadd %, %
+%add4->add %, 10
+%conv3->fptosi %add2
+
+
+#Edge outcoming
+%add2->fadd %, %
+%add4->add %, 10
+%conv3->fptosi %add2
+%conv5->zext %
+
+
+
+representation :   %shr = ashr i32 %conv5, 2
+#Edge incoming
+%add2->fadd %, %
+%add4->add %, 10
+%conv3->fptosi %add2
+%conv5->zext %
+
+
+#Edge outcoming
+%add2->fadd %, %
+%add4->add %, 10
+%conv3->fptosi %add2
+%conv5->zext %
+%shr->ashr %conv5, 2
+
+
+
+representation :   %conv6 = trunc i32 %shr to i16
+#Edge incoming
+%add2->fadd %, %
+%add4->add %, 10
+%conv3->fptosi %add2
+%conv5->zext %
+%shr->ashr %conv5, 2
+
+
+#Edge outcoming
+%add2->fadd %, %
+%add4->add %, 10
+%conv3->fptosi %add2
+%conv5->zext %
+%conv6->trunk %shr
+%shr->ashr %conv5, 2
+
+
+
+representation :   store i16 %conv6, i16* %short2, align 2
+#Edge incoming
+%add2->fadd %, %
+%add4->add %, 10
+%conv3->fptosi %add2
+%conv5->zext %
+%conv6->trunk %shr
+%shr->ashr %conv5, 2
+
+
+#Edge outcoming
+%add2->fadd %, %
+%add4->add %, 10
+%conv3->fptosi %add2
+%conv5->zext %
+%conv6->trunk %shr
+%shr->ashr %conv5, 2
+
+
+
+representation :   %8 = load i32* %c, align 4
+#Edge incoming
+%add2->fadd %, %
+%add4->add %, 10
+%conv3->fptosi %add2
+%conv5->zext %
+%conv6->trunk %shr
+%shr->ashr %conv5, 2
+
+
+#Edge outcoming
+%add2->fadd %, %
+%add4->add %, 10
+%conv3->fptosi %add2
+%conv5->zext %
+%conv6->trunk %shr
+%shr->ashr %conv5, 2
+
+
+
+representation :   %9 = load i32* %d, align 4
+#Edge incoming
+%add2->fadd %, %
+%add4->add %, 10
+%conv3->fptosi %add2
+%conv5->zext %
+%conv6->trunk %shr
+%shr->ashr %conv5, 2
+
+
+#Edge outcoming
+%add2->fadd %, %
+%add4->add %, 10
+%conv3->fptosi %add2
+%conv5->zext %
+%conv6->trunk %shr
+%shr->ashr %conv5, 2
+
+
+
+representation :   %add7 = add nsw i32 %8, %9
+#Edge incoming
+%add2->fadd %, %
+%add4->add %, 10
+%conv3->fptosi %add2
+%conv5->zext %
+%conv6->trunk %shr
+%shr->ashr %conv5, 2
+
+
+#Edge outcoming
+%add2->fadd %, %
+%add4->add %, 10
+%add7->add %, %
+%conv3->fptosi %add2
+%conv5->zext %
+%conv6->trunk %shr
+%shr->ashr %conv5, 2
+
+
+
+representation :   store i32 %add7, i32* %h, align 4
+#Edge incoming
+%add2->fadd %, %
+%add4->add %, 10
+%add7->add %, %
+%conv3->fptosi %add2
+%conv5->zext %
+%conv6->trunk %shr
+%shr->ashr %conv5, 2
+
+
+#Edge outcoming
+%add2->fadd %, %
+%add4->add %, 10
+%add7->add %, %
+%conv3->fptosi %add2
+%conv5->zext %
+%conv6->trunk %shr
+%shr->ashr %conv5, 2
+
+
+
+representation :   %10 = load i32* %d, align 4
+#Edge incoming
+%add2->fadd %, %
+%add4->add %, 10
+%add7->add %, %
+%conv3->fptosi %add2
+%conv5->zext %
+%conv6->trunk %shr
+%shr->ashr %conv5, 2
+
+
+#Edge outcoming
+%add2->fadd %, %
+%add4->add %, 10
+%add7->add %, %
+%conv3->fptosi %add2
+%conv5->zext %
+%conv6->trunk %shr
+%shr->ashr %conv5, 2
+
+
+
+representation :   store i32 %10, i32* %ff, align 4
+#Edge incoming
+%add2->fadd %, %
+%add4->add %, 10
+%add7->add %, %
+%conv3->fptosi %add2
+%conv5->zext %
+%conv6->trunk %shr
+%shr->ashr %conv5, 2
+
+
+#Edge outcoming
+%add2->fadd %, %
+%add4->add %, 10
+%add7->add %, %
+%conv3->fptosi %add2
+%conv5->zext %
+%conv6->trunk %shr
+%shr->ashr %conv5, 2
+
+
+
+representation :   %11 = load i32* %c, align 4
+#Edge incoming
+%add2->fadd %, %
+%add4->add %, 10
+%add7->add %, %
+%conv3->fptosi %add2
+%conv5->zext %
+%conv6->trunk %shr
+%shr->ashr %conv5, 2
+
+
+#Edge outcoming
+%add2->fadd %, %
+%add4->add %, 10
+%add7->add %, %
+%conv3->fptosi %add2
+%conv5->zext %
+%conv6->trunk %shr
+%shr->ashr %conv5, 2
+
+
+
+representation :   %12 = load i32* %d, align 4
+#Edge incoming
+%add2->fadd %, %
+%add4->add %, 10
+%add7->add %, %
+%conv3->fptosi %add2
+%conv5->zext %
+%conv6->trunk %shr
+%shr->ashr %conv5, 2
+
+
+#Edge outcoming
+%add2->fadd %, %
+%add4->add %, 10
+%add7->add %, %
+%conv3->fptosi %add2
+%conv5->zext %
+%conv6->trunk %shr
+%shr->ashr %conv5, 2
+
+
+
+representation :   %add8 = add nsw i32 %11, %12
+#Edge incoming
+%add2->fadd %, %
+%add4->add %, 10
+%add7->add %, %
+%conv3->fptosi %add2
+%conv5->zext %
+%conv6->trunk %shr
+%shr->ashr %conv5, 2
+
+
+#Edge outcoming
+%add2->fadd %, %
+%add4->add %, 10
+%add7->add %, %
+%add8->add %, %
+%conv3->fptosi %add2
+%conv5->zext %
+%conv6->trunk %shr
+%shr->ashr %conv5, 2
+
+
+
+representation :   store i32 %add8, i32* %f, align 4
+#Edge incoming
+%add2->fadd %, %
+%add4->add %, 10
+%add7->add %, %
+%add8->add %, %
+%conv3->fptosi %add2
+%conv5->zext %
+%conv6->trunk %shr
+%shr->ashr %conv5, 2
+
+
+#Edge outcoming
+%add2->fadd %, %
+%add4->add %, 10
+%add7->add %, %
+%add8->add %, %
+%conv3->fptosi %add2
+%conv5->zext %
+%conv6->trunk %shr
+%shr->ashr %conv5, 2
+
+
+
+representation :   %13 = load i32* %f, align 4
+#Edge incoming
+%add2->fadd %, %
+%add4->add %, 10
+%add7->add %, %
+%add8->add %, %
+%conv3->fptosi %add2
+%conv5->zext %
+%conv6->trunk %shr
+%shr->ashr %conv5, 2
+
+
+#Edge outcoming
+%add2->fadd %, %
+%add4->add %, 10
+%add7->add %, %
+%add8->add %, %
+%conv3->fptosi %add2
+%conv5->zext %
+%conv6->trunk %shr
+%shr->ashr %conv5, 2
+
+
+
+representation :   %14 = load i32* %d, align 4
+#Edge incoming
+%add2->fadd %, %
+%add4->add %, 10
+%add7->add %, %
+%add8->add %, %
+%conv3->fptosi %add2
+%conv5->zext %
+%conv6->trunk %shr
+%shr->ashr %conv5, 2
+
+
+#Edge outcoming
+%add2->fadd %, %
+%add4->add %, 10
+%add7->add %, %
+%add8->add %, %
+%conv3->fptosi %add2
+%conv5->zext %
+%conv6->trunk %shr
+%shr->ashr %conv5, 2
+
+
+
+representation :   %add9 = add nsw i32 %13, %14
+#Edge incoming
+%add2->fadd %, %
+%add4->add %, 10
+%add7->add %, %
+%add8->add %, %
+%conv3->fptosi %add2
+%conv5->zext %
+%conv6->trunk %shr
+%shr->ashr %conv5, 2
+
+
+#Edge outcoming
+%add2->fadd %, %
+%add4->add %, 10
+%add7->add %, %
+%add8->add %, %
+%add9->add %, %
+%conv3->fptosi %add2
+%conv5->zext %
+%conv6->trunk %shr
+%shr->ashr %conv5, 2
+
+
+
+representation :   store i32 %add9, i32* %g, align 4
+#Edge incoming
+%add2->fadd %, %
+%add4->add %, 10
+%add7->add %, %
+%add8->add %, %
+%add9->add %, %
+%conv3->fptosi %add2
+%conv5->zext %
+%conv6->trunk %shr
+%shr->ashr %conv5, 2
+
+
+#Edge outcoming
+%add2->fadd %, %
+%add4->add %, 10
+%add7->add %, %
+%add8->add %, %
+%add9->add %, %
+%conv3->fptosi %add2
+%conv5->zext %
+%conv6->trunk %shr
+%shr->ashr %conv5, 2
+
+
+
+representation :   ret i32 0
+#Edge incoming
+%add2->fadd %, %
+%add4->add %, 10
+%add7->add %, %
+%add8->add %, %
+%add9->add %, %
+%conv3->fptosi %add2
+%conv5->zext %
+%conv6->trunk %shr
+%shr->ashr %conv5, 2
+
+
+#Edge outcoming
+%add2->fadd %, %
+%add4->add %, 10
+%add7->add %, %
+%add8->add %, %
+%add9->add %, %
+%conv3->fptosi %add2
+%conv5->zext %
+%conv6->trunk %shr
+%shr->ashr %conv5, 2
+
+
+
+representation : 
+if.end:                                           ; preds = %if.else, %if.then
+  store i16 2, i16* %short1, align 2
+  %7 = load i16* %short1, align 2
+  %conv5 = zext i16 %7 to i32
+  %shr = ashr i32 %conv5, 2
+  %conv6 = trunc i32 %shr to i16
+  store i16 %conv6, i16* %short2, align 2
+  %8 = load i32* %c, align 4
+  %9 = load i32* %d, align 4
+  %add7 = add nsw i32 %8, %9
+  store i32 %add7, i32* %h, align 4
+  %10 = load i32* %d, align 4
+  store i32 %10, i32* %ff, align 4
+  %11 = load i32* %c, align 4
+  %12 = load i32* %d, align 4
+  %add8 = add nsw i32 %11, %12
+  store i32 %add8, i32* %f, align 4
+  %13 = load i32* %f, align 4
+  %14 = load i32* %d, align 4
+  %add9 = add nsw i32 %13, %14
+  store i32 %add9, i32* %g, align 4
+  ret i32 0
+
+#Edge incoming
+%add2->fadd %, %
+%add4->add %, 10
+%add7->add %, %
+%add8->add %, %
+%add9->add %, %
+%conv3->fptosi %add2
+%conv5->zext %
+%conv6->trunk %shr
+%shr->ashr %conv5, 2
+
+%add2->fadd %, %
+%add4->add %, 10
+%add7->add %, %
+%add8->add %, %
+%add9->add %, %
+%conv3->fptosi %add2
+%conv5->zext %
+%conv6->trunk %shr
+%shr->ashr %conv5, 2
+
+
+#Edge outcoming
+%add2->fadd %, %
+%add4->add %, 10
+%add7->add %, %
+%add8->add %, %
+%add9->add %, %
+%conv3->fptosi %add2
+%conv5->zext %
+%conv6->trunk %shr
+%shr->ashr %conv5, 2
+
+
+
+representation :   %2 = load float* %b, align 4
+#Edge incoming
+BOTTOM
+
+#Edge outcoming
+BOTTOM
+
+
+representation :   %add = fadd float %1, %2
+#Edge incoming
+BOTTOM
+
+#Edge outcoming
+%add->fadd %, %
+
+
+
+representation :   %conv = fptosi float %add to i32
+#Edge incoming
+%add->fadd %, %
+
+
+#Edge outcoming
+%add->fadd %, %
+%conv->fptosi %add
+
+
+
+representation :   store i32 %conv, i32* %c, align 4
+#Edge incoming
+%add->fadd %, %
+%conv->fptosi %add
+
+
+#Edge outcoming
+%add->fadd %, %
+%conv->fptosi %add
+
+
+
+representation :   %3 = load i32* %g, align 4
+#Edge incoming
+%add->fadd %, %
+%conv->fptosi %add
+
+
+#Edge outcoming
+%add->fadd %, %
+%conv->fptosi %add
+
+
+
+representation :   %add1 = add nsw i32 %3, 10
+#Edge incoming
+%add->fadd %, %
+%conv->fptosi %add
+
+
+#Edge outcoming
+%add->fadd %, %
+%add1->add %, 10
+%conv->fptosi %add
+
+
+
+representation :   store i32 %add1, i32* %d, align 4
+#Edge incoming
+%add->fadd %, %
+%add1->add %, 10
+%conv->fptosi %add
+
+
+#Edge outcoming
+%add->fadd %, %
+%add1->add %, 10
+%conv->fptosi %add
+
+
+
+representation :   br label %if.end
+#Edge incoming
+%add->fadd %, %
+%add1->add %, 10
+%conv->fptosi %add
+
+%add->fadd %, %
+%add1->add %, 10
+%conv->fptosi %add
+
+
+#Edge outcoming
+%add->fadd %, %
+%add1->add %, 10
+%conv->fptosi %add
+
+
+
+representation :   call void @__cxx_global_var_init()
+#Edge incoming
+BOTTOM
+
+#Edge outcoming
+BOTTOM
+
+
+representation :   ret void
+#Edge incoming
+BOTTOM
+
+#Edge outcoming
+BOTTOM
+
+
+representation : 
+entry:
+  call void @__cxx_global_var_init()
+  ret void
+
+#Edge incoming
+BOTTOM
+BOTTOM
+
+#Edge outcoming
+BOTTOM
+
+

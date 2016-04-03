@@ -1,0 +1,69 @@
+Printing analysis 'PointerGuardian Pass' for function 'main':
+"Function Name" : "main
+representation :   %b = alloca i32, align 4
+#Edge incoming
+BOTTOM
+
+#Edge outcoming
+BOTTOM
+
+
+representation :   %a = alloca i32*, align 8
+#Edge incoming
+BOTTOM
+
+#Edge outcoming
+BOTTOM
+
+
+representation :   store i32 5, i32* %b, align 4
+#Edge incoming
+BOTTOM
+
+#Edge outcoming
+BOTTOM
+
+
+representation :   store i32* %b, i32** %a, align 8
+#Edge incoming
+BOTTOM
+
+#Edge outcoming
+a->b
+
+
+
+representation :   store i32* null, i32** %a, align 8
+#Edge incoming
+a->b
+
+
+#Edge outcoming
+BOTTOM
+
+
+representation :   ret i32 0
+#Edge incoming
+BOTTOM
+
+#Edge outcoming
+BOTTOM
+
+
+representation : 
+entry:
+  %b = alloca i32, align 4
+  %a = alloca i32*, align 8
+  store i32 5, i32* %b, align 4
+  store i32* %b, i32** %a, align 8
+  store i32* null, i32** %a, align 8
+  ret i32 0
+
+#Edge incoming
+BOTTOM
+BOTTOM
+
+#Edge outcoming
+BOTTOM
+
+

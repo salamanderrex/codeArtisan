@@ -1,0 +1,129 @@
+Printing analysis 'PointerGuardian Pass' for function 'main':
+"Function Name" : "main
+representation :   %hiddenValue = alloca i32, align 4
+#Edge incoming
+BOTTOM
+
+#Edge outcoming
+BOTTOM
+
+
+representation :   %y_other = alloca i32*, align 8
+#Edge incoming
+BOTTOM
+
+#Edge outcoming
+BOTTOM
+
+
+representation :   %x = alloca i32*, align 8
+#Edge incoming
+BOTTOM
+
+#Edge outcoming
+BOTTOM
+
+
+representation :   %y = alloca i32**, align 8
+#Edge incoming
+BOTTOM
+
+#Edge outcoming
+BOTTOM
+
+
+representation :   store i32* %hiddenValue, i32** %y_other, align 8
+#Edge incoming
+BOTTOM
+
+#Edge outcoming
+y_other->hiddenValue
+
+
+
+representation :   store i32** %y_other, i32*** %y, align 8
+#Edge incoming
+y_other->hiddenValue
+
+
+#Edge outcoming
+y->y_other
+y_other->hiddenValue
+
+
+
+representation :   %0 = load i32*** %y, align 8
+#Edge incoming
+y->y_other
+y_other->hiddenValue
+
+
+#Edge outcoming
+y->y_other
+y_other->hiddenValue
+
+
+
+representation :   %1 = load i32** %0, align 8
+#Edge incoming
+y->y_other
+y_other->hiddenValue
+
+
+#Edge outcoming
+y->y_other
+y_other->hiddenValue
+
+
+
+representation :   store i32* %1, i32** %x, align 8
+#Edge incoming
+y->y_other
+y_other->hiddenValue
+
+
+#Edge outcoming
+y->y_other
+y_other->hiddenValue
+
+
+
+representation :   ret i32 0
+#Edge incoming
+y->y_other
+y_other->hiddenValue
+
+
+#Edge outcoming
+y->y_other
+y_other->hiddenValue
+
+
+
+representation : 
+entry:
+  %hiddenValue = alloca i32, align 4
+  %y_other = alloca i32*, align 8
+  %x = alloca i32*, align 8
+  %y = alloca i32**, align 8
+  store i32* %hiddenValue, i32** %y_other, align 8
+  store i32** %y_other, i32*** %y, align 8
+  %0 = load i32*** %y, align 8
+  %1 = load i32** %0, align 8
+  store i32* %1, i32** %x, align 8
+  ret i32 0
+
+#Edge incoming
+y->y_other
+y_other->hiddenValue
+
+y->y_other
+y_other->hiddenValue
+
+
+#Edge outcoming
+y->y_other
+y_other->hiddenValue
+
+
+

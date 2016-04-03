@@ -1,0 +1,129 @@
+Printing analysis 'PointerGuardian Pass' for function 'main':
+"Function Name" : "main
+representation :   %x_other = alloca i32*, align 8
+#Edge incoming
+BOTTOM
+
+#Edge outcoming
+BOTTOM
+
+
+representation :   %y_other = alloca i32, align 4
+#Edge incoming
+BOTTOM
+
+#Edge outcoming
+BOTTOM
+
+
+representation :   %x = alloca i32**, align 8
+#Edge incoming
+BOTTOM
+
+#Edge outcoming
+BOTTOM
+
+
+representation :   %y = alloca i32*, align 8
+#Edge incoming
+BOTTOM
+
+#Edge outcoming
+BOTTOM
+
+
+representation :   store i32** %x_other, i32*** %x, align 8
+#Edge incoming
+BOTTOM
+
+#Edge outcoming
+x->x_other
+
+
+
+representation :   store i32* %y_other, i32** %y, align 8
+#Edge incoming
+x->x_other
+
+
+#Edge outcoming
+x->x_other
+y->y_other
+
+
+
+representation :   %0 = load i32** %y, align 8
+#Edge incoming
+x->x_other
+y->y_other
+
+
+#Edge outcoming
+x->x_other
+y->y_other
+
+
+
+representation :   %1 = load i32*** %x, align 8
+#Edge incoming
+x->x_other
+y->y_other
+
+
+#Edge outcoming
+x->x_other
+y->y_other
+
+
+
+representation :   store i32* %0, i32** %1, align 8
+#Edge incoming
+x->x_other
+y->y_other
+
+
+#Edge outcoming
+x->x_other
+y->y_other
+
+
+
+representation :   ret i32 0
+#Edge incoming
+x->x_other
+y->y_other
+
+
+#Edge outcoming
+x->x_other
+y->y_other
+
+
+
+representation : 
+entry:
+  %x_other = alloca i32*, align 8
+  %y_other = alloca i32, align 4
+  %x = alloca i32**, align 8
+  %y = alloca i32*, align 8
+  store i32** %x_other, i32*** %x, align 8
+  store i32* %y_other, i32** %y, align 8
+  %0 = load i32** %y, align 8
+  %1 = load i32*** %x, align 8
+  store i32* %0, i32** %1, align 8
+  ret i32 0
+
+#Edge incoming
+x->x_other
+y->y_other
+
+x->x_other
+y->y_other
+
+
+#Edge outcoming
+x->x_other
+y->y_other
+
+
+

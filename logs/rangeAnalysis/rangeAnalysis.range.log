@@ -1,0 +1,284 @@
+Printing analysis 'Range Analysis Pass' for function 'main':
+Function Name:main
+representation :   %retval = alloca i32, align 4
+#Edge incoming
+ "value.size=0"
+#Edge outcoming
+ "value.size=0"
+
+
+representation :   %a = alloca i32, align 4
+#Edge incoming
+ "value.size=0"
+#Edge outcoming
+ "value.size=0"
+
+
+representation :   %b = alloca i32, align 4
+#Edge incoming
+ "value.size=0"
+#Edge outcoming
+ "value.size=0"
+
+
+representation :   %c = alloca i32, align 4
+#Edge incoming
+ "value.size=0"
+#Edge outcoming
+ "value.size=0"
+
+
+representation :   %d = alloca i32, align 4
+#Edge incoming
+ "value.size=0"
+#Edge outcoming
+ "value.size=0"
+
+
+representation :   %e = alloca i32, align 4
+#Edge incoming
+ "value.size=0"
+#Edge outcoming
+ "value.size=0"
+
+
+representation :   %f = alloca i32, align 4
+#Edge incoming
+ "value.size=0"
+#Edge outcoming
+ "value.size=0"
+
+
+representation :   %g = alloca i32, align 4
+#Edge incoming
+ "value.size=0"
+#Edge outcoming
+ "value.size=0"
+
+
+representation :   %h = alloca i32, align 4
+#Edge incoming
+ "value.size=0"
+#Edge outcoming
+ "value.size=0"
+
+
+representation :   store i32 0, i32* %retval
+#Edge incoming
+ "value.size=0"
+#Edge outcoming
+{"retval" : [0,0]; }
+
+
+representation :   store i32 5, i32* %a, align 4
+#Edge incoming
+{"retval" : [0,0]; }
+#Edge outcoming
+{"a" : [5,5]; "retval" : [0,0]; }
+
+
+representation :   %0 = load i32* %a, align 4
+#Edge incoming
+{"a" : [5,5]; "retval" : [0,0]; }
+#Edge outcoming
+{"a" : [5,5]; "retval" : [0,0]; "tmp" : [5,5]; }
+
+
+representation :   %add = add nsw i32 %0, 50
+#Edge incoming
+{"a" : [5,5]; "retval" : [0,0]; "tmp" : [5,5]; }
+#Edge outcoming
+{"a" : [5,5]; "add" : [55,55]; "retval" : [0,0]; }
+
+
+representation :   store i32 %add, i32* %b, align 4
+#Edge incoming
+{"a" : [5,5]; "add" : [55,55]; "retval" : [0,0]; }
+#Edge outcoming
+{"a" : [5,5]; "b" : [55,55]; "retval" : [0,0]; }
+
+
+representation :   %1 = load i32* %b, align 4
+#Edge incoming
+{"a" : [5,5]; "b" : [55,55]; "retval" : [0,0]; }
+#Edge outcoming
+{"a" : [5,5]; "b" : [55,55]; "retval" : [0,0]; "tmp" : [55,55]; }
+
+
+representation :   %mul = mul nsw i32 %1, 50
+#Edge incoming
+{"a" : [5,5]; "b" : [55,55]; "retval" : [0,0]; "tmp" : [55,55]; }
+#Edge outcoming
+{"a" : [5,5]; "b" : [55,55]; "mul" : [2750,2750]; "retval" : [0,0]; }
+
+
+representation :   store i32 %mul, i32* %c, align 4
+#Edge incoming
+{"a" : [5,5]; "b" : [55,55]; "mul" : [2750,2750]; "retval" : [0,0]; }
+#Edge outcoming
+{"a" : [5,5]; "b" : [55,55]; "c" : [2750,2750]; "retval" : [0,0]; }
+
+
+representation :   %2 = load i32* %b, align 4
+#Edge incoming
+{"a" : [5,5]; "b" : [55,55]; "c" : [2750,2750]; "retval" : [0,0]; }
+#Edge outcoming
+{"a" : [5,5]; "b" : [55,55]; "c" : [2750,2750]; "retval" : [0,0]; "tmp" : [55,55]; }
+
+
+representation :   %div = sdiv i32 %2, 25
+#Edge incoming
+{"a" : [5,5]; "b" : [55,55]; "c" : [2750,2750]; "retval" : [0,0]; "tmp" : [55,55]; }
+#Edge outcoming
+{"a" : [5,5]; "b" : [55,55]; "c" : [2750,2750]; "div" : [2.2,2.2]; "retval" : [0,0]; }
+
+
+representation :   store i32 %div, i32* %d, align 4
+#Edge incoming
+{"a" : [5,5]; "b" : [55,55]; "c" : [2750,2750]; "div" : [2.2,2.2]; "retval" : [0,0]; }
+#Edge outcoming
+{"a" : [5,5]; "b" : [55,55]; "c" : [2750,2750]; "d" : [2.2,2.2]; "retval" : [0,0]; }
+
+
+representation :   %3 = load i32* %b, align 4
+#Edge incoming
+{"a" : [5,5]; "b" : [55,55]; "c" : [2750,2750]; "d" : [2.2,2.2]; "retval" : [0,0]; }
+#Edge outcoming
+{"a" : [5,5]; "b" : [55,55]; "c" : [2750,2750]; "d" : [2.2,2.2]; "retval" : [0,0]; "tmp" : [55,55]; }
+
+
+representation :   %rem = srem i32 %3, 25
+#Edge incoming
+{"a" : [5,5]; "b" : [55,55]; "c" : [2750,2750]; "d" : [2.2,2.2]; "retval" : [0,0]; "tmp" : [55,55]; }
+#Edge outcoming
+{"a" : [5,5]; "b" : [55,55]; "c" : [2750,2750]; "d" : [2.2,2.2]; "rem" : [5,5]; "retval" : [0,0]; }
+
+
+representation :   store i32 %rem, i32* %e, align 4
+#Edge incoming
+{"a" : [5,5]; "b" : [55,55]; "c" : [2750,2750]; "d" : [2.2,2.2]; "rem" : [5,5]; "retval" : [0,0]; }
+#Edge outcoming
+{"a" : [5,5]; "b" : [55,55]; "c" : [2750,2750]; "d" : [2.2,2.2]; "e" : [5,5]; "retval" : [0,0]; }
+
+
+representation :   %4 = load i32* %b, align 4
+#Edge incoming
+{"a" : [5,5]; "b" : [55,55]; "c" : [2750,2750]; "d" : [2.2,2.2]; "e" : [5,5]; "retval" : [0,0]; }
+#Edge outcoming
+{"a" : [5,5]; "b" : [55,55]; "c" : [2750,2750]; "d" : [2.2,2.2]; "e" : [5,5]; "retval" : [0,0]; "tmp" : [55,55]; }
+
+
+representation :   %sub = sub nsw i32 %4, 50
+#Edge incoming
+{"a" : [5,5]; "b" : [55,55]; "c" : [2750,2750]; "d" : [2.2,2.2]; "e" : [5,5]; "retval" : [0,0]; "tmp" : [55,55]; }
+#Edge outcoming
+{"a" : [5,5]; "b" : [55,55]; "c" : [2750,2750]; "d" : [2.2,2.2]; "e" : [5,5]; "retval" : [0,0]; "sub" : [5,5]; }
+
+
+representation :   store i32 %sub, i32* %f, align 4
+#Edge incoming
+{"a" : [5,5]; "b" : [55,55]; "c" : [2750,2750]; "d" : [2.2,2.2]; "e" : [5,5]; "retval" : [0,0]; "sub" : [5,5]; }
+#Edge outcoming
+{"a" : [5,5]; "b" : [55,55]; "c" : [2750,2750]; "d" : [2.2,2.2]; "e" : [5,5]; "f" : [5,5]; "retval" : [0,0]; }
+
+
+representation :   %5 = load i32* %b, align 4
+#Edge incoming
+{"a" : [5,5]; "b" : [55,55]; "c" : [2750,2750]; "d" : [2.2,2.2]; "e" : [5,5]; "f" : [5,5]; "retval" : [0,0]; }
+#Edge outcoming
+{"a" : [5,5]; "b" : [55,55]; "c" : [2750,2750]; "d" : [2.2,2.2]; "e" : [5,5]; "f" : [5,5]; "retval" : [0,0]; "tmp" : [55,55]; }
+
+
+representation :   %shr = ashr i32 %5, 1
+#Edge incoming
+{"a" : [5,5]; "b" : [55,55]; "c" : [2750,2750]; "d" : [2.2,2.2]; "e" : [5,5]; "f" : [5,5]; "retval" : [0,0]; "tmp" : [55,55]; }
+#Edge outcoming
+{"a" : [5,5]; "b" : [55,55]; "c" : [2750,2750]; "d" : [2.2,2.2]; "e" : [5,5]; "f" : [5,5]; "retval" : [0,0]; "shr" : [27,27]; }
+
+
+representation :   store i32 %shr, i32* %g, align 4
+#Edge incoming
+{"a" : [5,5]; "b" : [55,55]; "c" : [2750,2750]; "d" : [2.2,2.2]; "e" : [5,5]; "f" : [5,5]; "retval" : [0,0]; "shr" : [27,27]; }
+#Edge outcoming
+{"a" : [5,5]; "b" : [55,55]; "c" : [2750,2750]; "d" : [2.2,2.2]; "e" : [5,5]; "f" : [5,5]; "g" : [27,27]; "retval" : [0,0]; }
+
+
+representation :   %6 = load i32* %b, align 4
+#Edge incoming
+{"a" : [5,5]; "b" : [55,55]; "c" : [2750,2750]; "d" : [2.2,2.2]; "e" : [5,5]; "f" : [5,5]; "g" : [27,27]; "retval" : [0,0]; }
+#Edge outcoming
+{"a" : [5,5]; "b" : [55,55]; "c" : [2750,2750]; "d" : [2.2,2.2]; "e" : [5,5]; "f" : [5,5]; "g" : [27,27]; "retval" : [0,0]; "tmp" : [55,55]; }
+
+
+representation :   %shl = shl i32 %6, 1
+#Edge incoming
+{"a" : [5,5]; "b" : [55,55]; "c" : [2750,2750]; "d" : [2.2,2.2]; "e" : [5,5]; "f" : [5,5]; "g" : [27,27]; "retval" : [0,0]; "tmp" : [55,55]; }
+#Edge outcoming
+{"a" : [5,5]; "b" : [55,55]; "c" : [2750,2750]; "d" : [2.2,2.2]; "e" : [5,5]; "f" : [5,5]; "g" : [27,27]; "retval" : [0,0]; "shl" : [110,110]; }
+
+
+representation :   store i32 %shl, i32* %h, align 4
+#Edge incoming
+{"a" : [5,5]; "b" : [55,55]; "c" : [2750,2750]; "d" : [2.2,2.2]; "e" : [5,5]; "f" : [5,5]; "g" : [27,27]; "retval" : [0,0]; "shl" : [110,110]; }
+#Edge outcoming
+{"a" : [5,5]; "b" : [55,55]; "c" : [2750,2750]; "d" : [2.2,2.2]; "e" : [5,5]; "f" : [5,5]; "g" : [27,27]; "h" : [110,110]; "retval" : [0,0]; }
+
+
+representation :   %7 = load i32* %a, align 4
+#Edge incoming
+{"a" : [5,5]; "b" : [55,55]; "c" : [2750,2750]; "d" : [2.2,2.2]; "e" : [5,5]; "f" : [5,5]; "g" : [27,27]; "h" : [110,110]; "retval" : [0,0]; }
+#Edge outcoming
+{"a" : [5,5]; "b" : [55,55]; "c" : [2750,2750]; "d" : [2.2,2.2]; "e" : [5,5]; "f" : [5,5]; "g" : [27,27]; "h" : [110,110]; "retval" : [0,0]; "tmp" : [5,5]; }
+
+
+representation :   ret i32 %7
+#Edge incoming
+{"a" : [5,5]; "b" : [55,55]; "c" : [2750,2750]; "d" : [2.2,2.2]; "e" : [5,5]; "f" : [5,5]; "g" : [27,27]; "h" : [110,110]; "retval" : [0,0]; "tmp" : [5,5]; }
+#Edge outcoming
+{"a" : [5,5]; "b" : [55,55]; "c" : [2750,2750]; "d" : [2.2,2.2]; "e" : [5,5]; "f" : [5,5]; "g" : [27,27]; "h" : [110,110]; "retval" : [5,5]; }
+
+
+representation : 
+entry:
+  %retval = alloca i32, align 4
+  %a = alloca i32, align 4
+  %b = alloca i32, align 4
+  %c = alloca i32, align 4
+  %d = alloca i32, align 4
+  %e = alloca i32, align 4
+  %f = alloca i32, align 4
+  %g = alloca i32, align 4
+  %h = alloca i32, align 4
+  store i32 0, i32* %retval
+  store i32 5, i32* %a, align 4
+  %0 = load i32* %a, align 4
+  %add = add nsw i32 %0, 50
+  store i32 %add, i32* %b, align 4
+  %1 = load i32* %b, align 4
+  %mul = mul nsw i32 %1, 50
+  store i32 %mul, i32* %c, align 4
+  %2 = load i32* %b, align 4
+  %div = sdiv i32 %2, 25
+  store i32 %div, i32* %d, align 4
+  %3 = load i32* %b, align 4
+  %rem = srem i32 %3, 25
+  store i32 %rem, i32* %e, align 4
+  %4 = load i32* %b, align 4
+  %sub = sub nsw i32 %4, 50
+  store i32 %sub, i32* %f, align 4
+  %5 = load i32* %b, align 4
+  %shr = ashr i32 %5, 1
+  store i32 %shr, i32* %g, align 4
+  %6 = load i32* %b, align 4
+  %shl = shl i32 %6, 1
+  store i32 %shl, i32* %h, align 4
+  %7 = load i32* %a, align 4
+  ret i32 %7
+
+#Edge incoming
+{"a" : [5,5]; "b" : [55,55]; "c" : [2750,2750]; "d" : [2.2,2.2]; "e" : [5,5]; "f" : [5,5]; "g" : [27,27]; "h" : [110,110]; "retval" : [5,5]; }
+{"a" : [5,5]; "b" : [55,55]; "c" : [2750,2750]; "d" : [2.2,2.2]; "e" : [5,5]; "f" : [5,5]; "g" : [27,27]; "h" : [110,110]; "retval" : [5,5]; }
+#Edge outcoming
+{"a" : [5,5]; "b" : [55,55]; "c" : [2750,2750]; "d" : [2.2,2.2]; "e" : [5,5]; "f" : [5,5]; "g" : [27,27]; "h" : [110,110]; "retval" : [5,5]; }
+
+
