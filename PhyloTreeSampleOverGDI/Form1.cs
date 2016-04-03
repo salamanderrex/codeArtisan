@@ -45,6 +45,22 @@ namespace PhyloTreeSampleOverGDI {
 
         }
 
+
+        Microsoft.Msagl.Drawing.Color getAcolor(int counter)
+        {
+            if (counter % 3 == 0)
+            {
+                return Microsoft.Msagl.Drawing.Color.Green;
+            } else if (counter % 3 == 1)
+            {
+                return Microsoft.Msagl.Drawing.Color.PowderBlue;
+            } else if (counter % 3 == 2)
+            {
+                return Microsoft.Msagl.Drawing.Color.Yellow;
+            }
+
+            return Microsoft.Msagl.Drawing.Color.Purple;
+        }
         void button1_Click(object sender, EventArgs e) {
          
             if (counter >= IR_List.Count())
@@ -60,6 +76,7 @@ namespace PhyloTreeSampleOverGDI {
             
          
             var graph = new Graph();
+          
             Console.WriteLine("in the buttion1!~!!!!!");
             
             
@@ -67,16 +84,24 @@ namespace PhyloTreeSampleOverGDI {
             counter++;
             Console.WriteLine("conuter is " + counter);
             //graph.AddEdge("instruction", "instruction").LabelText = irCluster.cluster[0].Instname;
-            Node Insnode = new Node(irCluster.cluster[0].Instname);
-            graph.AddNode(Insnode);
+            //Node Insnode = new Node(irCluster.cluster[0].Instname);
+            this.textBox1.Text = irCluster.cluster[0].Instname;
+           // graph.AddNode(Insnode);
             counter++;
-           
+            string previousP = "";
+            int color = 0;
             foreach (IR ir in irCluster.cluster)
             {
                 Console.WriteLine(ir.PointerStatus);
                 String startP = ir.returnStartP();
                 String endP = ir.returnEndP();
                 //graph.AddEdge(startP, endP);
+                if (!startP.Equals(previousP))
+                {
+                    
+                    color++;
+                }
+                previousP = startP; 
                 if (startP.Equals(endP) && (startP.Equals("BOTTOM") || startP.Equals("TOP")))
                 {
                     Node node = new Node(startP);
@@ -85,48 +110,14 @@ namespace PhyloTreeSampleOverGDI {
                 else
                 {
                     graph.AddEdge(startP, endP);
+                    Microsoft.Msagl.Drawing.Node c = graph.FindNode(startP);
+                    c.Attr.Shape = Microsoft.Msagl.Drawing.Shape.Circle;
+                    graph.FindNode(startP).Attr.FillColor = getAcolor(color);
+                    graph.FindNode(endP).Attr.FillColor = getAcolor(color);
                 }
 
             }
        
-
-            graph.CreateGeometryGraph();
-            foreach (Node node in graph.Nodes)
-                node.GeometryNode.BoundaryCurve = CreateLabelAndBoundary(node);
-               
-            foreach (var edge in graph.Edges)
-            {
-                if (edge.Label != null)
-                {
-                    var geomEdge = edge.GeometryEdge;
-                    double width;
-                    double height;
-                    StringMeasure.MeasureWithFont(edge.LabelText,
-                                                  new Font(edge.Label.FontName, (float)edge.Label.FontSize), out width, out height);
-                    edge.Label.GeometryLabel = geomEdge.Label = new Label(width, height, geomEdge);
-                }
-
-            }
-
-            var geomGraph = graph.GeometryGraph;
-
-            var geomGraphComponents = GraphConnectedComponents.CreateComponents(geomGraph.Nodes, geomGraph.Edges);
-            var settings = new SugiyamaLayoutSettings();
-            foreach (var subgraph in geomGraphComponents)
-            {
-
-                var layout = new LayeredLayout(subgraph, settings);
-                subgraph.Margins = settings.NodeSeparation / 2;
-                layout.Run();
-
-            }
-
-            Microsoft.Msagl.Layout.MDS.MdsGraphLayout.PackGraphs(geomGraphComponents, settings);
-
-            geomGraph.UpdateBoundingBox();
-
-
-            viewer.NeedToCalculateLayout = false;
             viewer.Graph = graph;
 
            
@@ -246,7 +237,19 @@ namespace PhyloTreeSampleOverGDI {
 
         private void button2_click(object sender, EventArgs e)
         {
-            counter--;
+          //  counter--;
+            if (counter >= IR_List.Count())
+            {
+                counter = IR_List.Count() - 1;
+            }
+            if (counter < 0)
+            {
+                counter = 0;
+            }
+
+
+
+
             if (counter >= IR_List.Count())
             {
                 counter = IR_List.Count() - 1;
@@ -260,16 +263,18 @@ namespace PhyloTreeSampleOverGDI {
 
 
             var graph = new Graph();
-            Console.WriteLine("in the buttion2!~!!!!!");
+
+            Console.WriteLine("in the buttion1!~!!!!!");
 
 
             IR_Cluster irCluster = IR_List[counter];
-            counter--;
+         
             Console.WriteLine("conuter is " + counter);
             //graph.AddEdge("instruction", "instruction").LabelText = irCluster.cluster[0].Instname;
-            Node Insnode = new Node(irCluster.cluster[0].Instname);
-            graph.AddNode(Insnode);
-            counter++;
+            //Node Insnode = new Node(irCluster.cluster[0].Instname);
+            this.textBox1.Text = irCluster.cluster[0].Instname;
+            // graph.AddNode(Insnode);
+            counter--;
 
             foreach (IR ir in irCluster.cluster)
             {
@@ -285,15 +290,17 @@ namespace PhyloTreeSampleOverGDI {
                 else
                 {
                     graph.AddEdge(startP, endP);
+                    Microsoft.Msagl.Drawing.Node c = graph.FindNode(startP);
+                    c.Attr.Shape = Microsoft.Msagl.Drawing.Shape.Diamond;
                 }
 
             }
 
-
+            /*
             graph.CreateGeometryGraph();
             foreach (Node node in graph.Nodes)
                 node.GeometryNode.BoundaryCurve = CreateLabelAndBoundary(node);
-
+               
             foreach (var edge in graph.Edges)
             {
                 if (edge.Label != null)
@@ -324,9 +331,9 @@ namespace PhyloTreeSampleOverGDI {
             Microsoft.Msagl.Layout.MDS.MdsGraphLayout.PackGraphs(geomGraphComponents, settings);
 
             geomGraph.UpdateBoundingBox();
+            */
 
-
-            viewer.NeedToCalculateLayout = false;
+            //  viewer.NeedToCalculateLayout = false;
             viewer.Graph = graph;
 
 
