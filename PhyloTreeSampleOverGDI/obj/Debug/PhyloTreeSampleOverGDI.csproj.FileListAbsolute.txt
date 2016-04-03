@@ -1,0 +1,17 @@
+\\psf\Home\Desktop\automatic-graph-layout-master\GraphLayout\Samples\PhyloTreeSampleOverGDI\bin\Debug\PhyloTreeSampleOverGDI.exe
+\\psf\Home\Desktop\automatic-graph-layout-master\GraphLayout\Samples\PhyloTreeSampleOverGDI\bin\Debug\PhyloTreeSampleOverGDI.pdb
+\\psf\Home\Desktop\automatic-graph-layout-master\GraphLayout\Samples\PhyloTreeSampleOverGDI\bin\Debug\Microsoft.Msagl.Drawing.dll
+\\psf\Home\Desktop\automatic-graph-layout-master\GraphLayout\Samples\PhyloTreeSampleOverGDI\bin\Debug\Microsoft.Msagl.GraphViewerGdi.dll
+\\psf\Home\Desktop\automatic-graph-layout-master\GraphLayout\Samples\PhyloTreeSampleOverGDI\bin\Debug\Microsoft.Msagl.dll
+\\psf\Home\Desktop\automatic-graph-layout-master\GraphLayout\Samples\PhyloTreeSampleOverGDI\bin\Debug\Microsoft.Msagl.Drawing.pdb
+\\psf\Home\Desktop\automatic-graph-layout-master\GraphLayout\Samples\PhyloTreeSampleOverGDI\bin\Debug\Microsoft.Msagl.Drawing.xml
+\\psf\Home\Desktop\automatic-graph-layout-master\GraphLayout\Samples\PhyloTreeSampleOverGDI\bin\Debug\Microsoft.Msagl.GraphViewerGdi.pdb
+\\psf\Home\Desktop\automatic-graph-layout-master\GraphLayout\Samples\PhyloTreeSampleOverGDI\bin\Debug\Microsoft.Msagl.GraphViewerGdi.xml
+\\psf\Home\Desktop\automatic-graph-layout-master\GraphLayout\Samples\PhyloTreeSampleOverGDI\bin\Debug\Microsoft.Msagl.pdb
+\\psf\Home\Desktop\automatic-graph-layout-master\GraphLayout\Samples\PhyloTreeSampleOverGDI\bin\Debug\Microsoft.Msagl.xml
+\\psf\Home\Desktop\automatic-graph-layout-master\GraphLayout\Samples\PhyloTreeSampleOverGDI\obj\Debug\PhyloTreeSampleOverGDI.csprojResolveAssemblyReference.cache
+\\psf\Home\Desktop\automatic-graph-layout-master\GraphLayout\Samples\PhyloTreeSampleOverGDI\obj\Debug\PhyloTreeSampleOverGDI.Form1.resources
+\\psf\Home\Desktop\automatic-graph-layout-master\GraphLayout\Samples\PhyloTreeSampleOverGDI\obj\Debug\PhyloTreeSampleOverGDI.Properties.Resources.resources
+\\psf\Home\Desktop\automatic-graph-layout-master\GraphLayout\Samples\PhyloTreeSampleOverGDI\obj\Debug\PhyloTreeSampleOverGDI.csproj.GenerateResource.Cache
+\\psf\Home\Desktop\automatic-graph-layout-master\GraphLayout\Samples\PhyloTreeSampleOverGDI\obj\Debug\PhyloTreeSampleOverGDI.exe
+\\psf\Home\Desktop\automatic-graph-layout-master\GraphLayout\Samples\PhyloTreeSampleOverGDI\obj\Debug\PhyloTreeSampleOverGDI.pdb
